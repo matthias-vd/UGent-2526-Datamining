@@ -1,0 +1,1 @@
+glm.fit <- glm(Direction ~ Lag1 + Lag2, family = binomial)
