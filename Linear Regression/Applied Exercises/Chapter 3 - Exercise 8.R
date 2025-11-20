@@ -1,0 +1,15 @@
+library(ISLR2)
+Auto <- na.omit(Auto)
+attach(Auto)
+lm.fit <- lm(mpg ~ horsepower, data = Auto)
+summary(lm.fit)
+newdata <- data.frame(horsepower = 102)
+pred <- predict(lm.fit, newdata)
+conf.int.95 <- predict(lm.fit, newdata, interval = "confidence", level = 0.95)
+pred.int.95 <- predict(lm.fit, newdata, interval = "prediction", level = 0.95)
+MC1=3
+MC2=4
+plot(horsepower, mpg,main = "mpg vs horsepower",xlab = "Horsepower",ylab = "Miles per Gallon",pch = 19,col = "steelblue")
+abline(lm.fit, col = "red", lwd = 2)
+par(mfrow = c(2, 2))
+plot(lm.fit)
