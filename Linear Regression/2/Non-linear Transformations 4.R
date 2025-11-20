@@ -1,0 +1,1 @@
+lm.fit <- lm(log(medv) ~ log(lstat), data = Boston)

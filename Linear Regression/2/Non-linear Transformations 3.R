@@ -1,0 +1,1 @@
+lm.fit4 <-lm(medv ~ poly(crim,4))
