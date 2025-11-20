@@ -1,0 +1,1 @@
+lm.fit <- lm(medv ~ lstat + age + rm,data=Boston)
