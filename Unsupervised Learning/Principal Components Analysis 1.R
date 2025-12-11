@@ -1,0 +1,1 @@
+variances <- apply(USArrests, 2, var)

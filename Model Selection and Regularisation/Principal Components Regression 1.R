@@ -1,0 +1,1 @@
+pcr.fit <- pcr(medv ~ ., data = Boston, scale = TRUE, validation = "CV")

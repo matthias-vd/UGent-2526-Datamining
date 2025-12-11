@@ -1,0 +1,5 @@
+set.seed(1)
+train <- sample(392, 196)
+lm.fit2 <- lm(mpg ~ poly(horsepower, 2), data = Auto, subset = train)
+lm.fit4 <- lm(mpg ~ poly(horsepower, 2)+year, data = Auto, subset = train)
+lm.mse4 <- mean((mpg - predict(lm.fit4, Auto))[-train]^2)
